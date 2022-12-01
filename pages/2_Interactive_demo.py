@@ -11,6 +11,7 @@ done in functions stored in files named container_(something).py
 import streamlit as st
 
 # Custom functions:
+from utilities.fixed_params import page_setup
 from utilities.inputs import \
     write_text_from_file
 # Containers:
@@ -22,14 +23,7 @@ import utilities.container_details
 # ###########################
 # ##### START OF SCRIPT #####
 # ###########################
-# ----- Page setup -----
-# The following options set up the display in the tab in your browser.
-# Set page to widescreen must be first call to st.
-st.set_page_config(
-    page_title='Template project',
-    page_icon=':thumbsup:',
-    # layout='wide'
-    )
+page_setup()
 
 # Title:
 st.markdown('# Interactive demo')
